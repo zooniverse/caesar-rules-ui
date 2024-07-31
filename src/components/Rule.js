@@ -11,7 +11,7 @@ export const Rule = ({ index, parentRule, parentRuleIndex, rules, rule, setRules
 
 	const connective = Connectives.find(c => c.type === rule[0]) ?? null;
 	const Component = (connective === null) ? null
-		: (connective.isConjunction) ? Conjunction : Comparator;
+		: (connective.type2 === 'conjunction') ? Conjunction : Comparator;
 
 	return (<div style={{margin: '1em', padding: '1em', border: '1px solid white' }}>
 		<div>

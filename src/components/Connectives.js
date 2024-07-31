@@ -1,67 +1,49 @@
 export const Connectives = [
 	{
 		type: 'and',
-		isComparator: false,
-		isConjunction: true,
-		isValue: false,
+		type2: 'conjunction',
 		js: '&&',
 	},
 	{
 		type: 'or',
-		isComparator: false,
-		isConjunction: true,
-		isValue: false,
+		type2: 'conjunction',
 		js: '||',
 	},
 	{
 		type: 'lt',
-		isComparator: true,
-		isConjunction: false,
-		isValue: false,
+		type2: 'comparator',
 		js: '<',
 	},
 	{
 		type: 'gt',
-		isComparator: true,
-		isConjunction: false,
-		isValue: false,
+		type2: 'comparator',
 		js: '>',
 	},
 	{
 		type: 'lt',
-		isComparator: true,
-		isConjunction: false,
-		isValue: false,
+		type2: 'comparator',
 		js: '<=',
 	},
 	{
 		type: 'gte',
-		isComparator: true,
-		isConjunction: false,
-		isValue: false,
+		type2: 'comparator',
 		js: '>=',
 	},
 	{
 		type: 'eq',
-		isComparator: true,
-		isConjunction: false,
-		isValue: false,
+		type2: 'comparator',
 		js: '==',
 	},
 	{
 		type: 'const',
-		isComparator: false,
-		isConjunction: false,
-		isValue: true,
+		type2: 'value',
 		js: 'const',
 	},
 	{
 		type: 'lookup',
-		isComparator: false,
-		isConjunction: false,
-		isValue: true,
+		type2: 'value',
 		js: 'lookup',
 	}
 ];
 
-export const ConnectiveValues = Connectives.filter(c => c.isValue === true);
+export const ConnectiveValues = Connectives.filter(c => c.type2 === 'value');

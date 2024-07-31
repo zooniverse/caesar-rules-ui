@@ -1,6 +1,6 @@
 import { Connectives } from "./Connectives.js";
 
-const dropdownItems = Connectives.filter(item => item.isComparator || item.isConjunction);
+const dropdownItems = Connectives.filter(item => item.type2 === 'comparator' || item.type2 === 'conjunction');
 
 export const Condition = ({ connective, index, rule, rules, setRules }) => {
 	const condition = rule[0];
@@ -9,11 +9,11 @@ export const Condition = ({ connective, index, rule, rules, setRules }) => {
 		const connectiveValue = e.target.value;
 		const _connective = Connectives.find(c => c.type === connectiveValue) ?? null;
 
-		if (connective?.isComparator && _connective.isConjunction) {
+		if (connective?.type2 === 'comparator' && _connective.type2 === 'conjunction') {
 			// converting from comparator to conjunction
 			rule.length = 0;
 			rule.push(connectiveValue);
-		} else if (connective?.isConjunction && _connective.isComparator) {
+		} else if (connective?.type2 === 'conjunction' && _connective.type2 === 'comparator') {
 			// converting from conjunction to comparator
 			rule.length = 0;
 			rule.push(connectiveValue);
