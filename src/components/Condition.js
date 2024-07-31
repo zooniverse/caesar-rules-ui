@@ -2,7 +2,7 @@ import { Connectives } from "./Connectives.js";
 
 const dropdownItems = Connectives.filter(item => item.type2 === 'comparator' || item.type2 === 'conjunction');
 
-export const Condition = ({ connective, index, rule, rules, setRules }) => {
+export const Condition = ({ connective, rule, rules, setRules }) => {
 	const condition = rule[0];
 
 	const changeCondition = (e) => {
@@ -26,9 +26,7 @@ export const Condition = ({ connective, index, rule, rules, setRules }) => {
 		setRules([...rules]);
 	};
 
-	return (<select value={condition}
-		onChange={changeCondition}
-	>
+	return (<select value={condition} onChange={changeCondition}>
 		<option value="">Select Condition</option>
 		{dropdownItems.map((rule, index) => {
 			return (<option

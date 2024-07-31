@@ -8,8 +8,7 @@ export const Conjunction = ({ index, rules, rule, setRules }) => {
 		setRules([...rules]);
 	};
 
-	return (<div style={{'padding': '.5em', border: '1px solid #999' }}>
-
+	return (<div className="border">
 		{_rules?.map((_rule, ruleIndex) => {
 			return (<Rule
 				key={ruleIndex}
@@ -22,9 +21,6 @@ export const Conjunction = ({ index, rules, rule, setRules }) => {
 				setRules={setRules}
 			/>)
 		})}
-
-		<div style={{ padding: '.5em 0' }}>
-			<p style={{padding: '1em'}} onClick={addRule}>Add Rule</p>
-		</div>
+		<p className="button" onClick={addRule}>Add Rule</p>
 	</div>);
 };

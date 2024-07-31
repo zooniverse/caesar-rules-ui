@@ -8,10 +8,10 @@ export const CaesarRuleBuilder = () => {
 		setRules([...rules, []]);
 	};
 
-	return (<div style={{ padding: '1em' }}>
+	return (<div>
 
-		<h2 style={{ padding: '0 0 1em 0' }}>Caesar Rule Builder</h2>
-		<div style={{ padding: '1em', border: '1px solid #999' }}>
+		<h2>Caesar Rule Builder</h2>
+		<div className="border">
 			{rules.map((rule, index) => {
 				return (<Rule
 					key={index}
@@ -23,8 +23,11 @@ export const CaesarRuleBuilder = () => {
 					setRules={setRules}
 				/>)
 			})}
-			<p style={{padding: '1em'}} onClick={addRule}>Add Rule</p>
+			<div className="button" onClick={addRule}>Add Rule</div>
 		</div>
-		<div style={{padding: '1em'}}>Output = {JSON.stringify(rules)}</div>
+		<div>
+			<h3>Output:</h3>
+			<pre>{JSON.stringify(rules)}</pre>
+		</div>
 	</div>);
 };

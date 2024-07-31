@@ -10,26 +10,25 @@ export const Rule = ({ index, parentRule, parentRuleIndex, rules, rule, setRules
 	};
 
 	const connective = Connectives.find(c => c.type === rule[0]) ?? null;
-	const Component = (connective === null) ? null
+	const ConnectiveComponent = (connective === null) ? null
 		: (connective.type2 === 'conjunction') ? Conjunction : Comparator;
 
-	return (<div style={{margin: '1em', padding: '1em', border: '1px solid white' }}>
-		<div>
+	return (<div className="border">
+		<div className="flex">
 			<Condition
 				connective={connective}
-				index={index}
 				rule={rule}
 				rules={rules}
 				setRules={setRules}
 			/>
-			<p style={{ float: 'right' }} onClick={deleteRule}>Delete Rule</p>
+			<div className="button" onClick={deleteRule}>Delete Rule</div>
 		</div>
-		{(Component !== null) && <Component
-				connective={connective}
-				index={index}
-				rule={rule}
-				rules={rules}
-				setRules={setRules}
-			/>}
+		{(ConnectiveComponent !== null) && <ConnectiveComponent
+			connective={connective}
+			index={index}
+			rule={rule}
+			rules={rules}
+			setRules={setRules}
+		/>}
 	</div>);
 };

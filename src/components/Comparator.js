@@ -1,8 +1,7 @@
-import { ConnectiveValues } from './Connectives.js';
-import { Lookup } from './Lookup.js';
 import { Const } from './Const.js';
+import { Lookup } from './Lookup.js';
 
-export const Comparator = ({ connective, index, rules, rule, setRules }) => {
+export const Comparator = ({ connective, rules, rule, setRules }) => {
 	const [_connective, ...values] = rule;
 	
 	const addValue = (e) => {
@@ -14,8 +13,8 @@ export const Comparator = ({ connective, index, rules, rule, setRules }) => {
 		e.target.value = '';
 	};
 
-	return (<div style={{'padding': '.5em', border: '1px solid #999' }}>
-		<div style={{ padding: '.5em 0' }}>VALUE is {connective.js}</div>
+	return (<div className="border">
+		<p>VALUE is {connective.js}</p>
 
 		{values?.map((value, index) => {
 			const Component = (value[0] === 'lookup') ? Lookup : Const;
@@ -24,17 +23,15 @@ export const Comparator = ({ connective, index, rules, rule, setRules }) => {
 				rules={rules}
 				rule={rule}
 				setRules={setRules}
-				valueIndex={index}
 				value={value}
+				valueIndex={index}
 			/>)
 		})}
 
-		<div style={{ padding: '.5em 0' }}>
-			<select onChange={addValue}>
-				<option value="">Add Value Condition</option>
-				<option>lookup</option>
-				<option>const</option>
-			</select>
-		</div>
+		<select onChange={addValue}>
+			<option value="">Add Value Condition</option>
+			<option>lookup</option>
+			<option>const</option>
+		</select>
 	</div>);
 };

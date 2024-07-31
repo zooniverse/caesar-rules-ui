@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-export const Const = ({ connective, index, rules, rule, setRules, valueIndex, value }) => {
+export const Const = ({ rules, rule, setRules, value, valueIndex }) => {
 	const changeValue = (e) => {
 		value[1] = e.target.value;
 		setRules([...rules]);
@@ -12,15 +10,14 @@ export const Const = ({ connective, index, rules, rule, setRules, valueIndex, va
 		setRules([...rules]);
 	}
 
-	return (<div>
+	return (<div className="const">
 		Const:
 		<input
 			onChange={changeValue}
 			placeholder="value"
-			style={{ margin: '0 .5em' }}
 			type="text"
 			value={value[1] || ''}
 		/>
-		<span onClick={deleteValue} style={{ float: 'right' }}>Delete Const</span>
+		<div className="button" onClick={deleteValue}>Delete Const</div>
 	</div>);
 };

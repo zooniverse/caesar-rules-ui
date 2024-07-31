@@ -45,5 +45,3 @@ export const Connectives = [
 		js: 'lookup',
 	}
 ];
-
-export const ConnectiveValues = Connectives.filter(c => c.type2 === 'value');
