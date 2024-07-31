@@ -1,22 +1,21 @@
 # Caesar Visualizer
 
-- https://github.com/hughdickinson/panoptes-python-client/blob/python-caesar-rule/panoptes_client/python_rule_generator.py
-- https://github.com/zooniverse/panoptes-python-client/pull/275
+Goal of this mini repo is to make building up the Rules for a Caesar Reduction easier.
 
-## 
-- evaluate true/false
-- logic & mathematical
-- syntax
-	- lt, gt, lte, gte
-	- eq, and, or
-	- const = value
-	- lookup = reference, default
+![screenshot](/public/CaesarRuleBuilder.png)
+
+## Getting Started
+Run the below commands to install the requisite packages and run the code locally.
+
+```js
+npm install
+npm run dev
+```
 
 ## Examples
 ["gt", ["lookup", "test_data_stuf", 0], ["const", 3]]
 
-## UI
-- when empty, give a dropdown of the operation
-  - when the operation changes, change the UI options
-- display the caesar config at the bottom
+## References Documentation
+- https://github.com/hughdickinson/panoptes-python-client/blob/python-caesar-rule/panoptes_client/python_rule_generator.py
+- https://github.com/zooniverse/panoptes-python-client/pull/275
 
