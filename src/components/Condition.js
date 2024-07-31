@@ -28,7 +28,6 @@ export const Condition = ({ connective, rule, rules, setRules }) => {
       rule.push(connectiveValue)
     } else {
       // no conversion needed
-      console.log('rule', rule)
       rule[0] = connectiveValue
     }
 
@@ -36,7 +35,7 @@ export const Condition = ({ connective, rule, rules, setRules }) => {
   }
 
   return (
-    <select value={condition} onChange={changeCondition}>
+    <select onChange={changeCondition} value={condition}>
       <option value=''>Select Condition</option>
       {dropdownItems.map((rule, index) => {
         return (

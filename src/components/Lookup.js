@@ -1,4 +1,4 @@
-export const Lookup = ({ rules, rule, setRules, valueIndex, value }) => {
+export const Lookup = ({ rule, rules, setRules, value, valueIndex }) => {
   const changeValue = e => {
     value[1] = e.target.value
     setRules([...rules])

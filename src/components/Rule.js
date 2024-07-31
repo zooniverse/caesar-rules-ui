@@ -7,8 +7,8 @@ export const Rule = ({
   index,
   parentRule,
   parentRuleIndex,
-  rules,
   rule,
+  rules,
   setRules
 }) => {
   const deleteRule = () => {

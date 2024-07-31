@@ -1,4 +1,4 @@
-export const Const = ({ rules, rule, setRules, value, valueIndex }) => {
+export const Const = ({ rule, rules, setRules, value, valueIndex }) => {
   const changeValue = e => {
     value[1] = e.target.value
     setRules([...rules])

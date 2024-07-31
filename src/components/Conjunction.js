@@ -1,6 +1,6 @@
 import { Rule } from './Rule.js'
 
-export const Conjunction = ({ index, rules, rule, setRules }) => {
+export const Conjunction = ({ index, rule, rules, setRules }) => {
   const [_connective, ..._rules] = rule
 
   const addRule = () => {
@@ -17,9 +17,9 @@ export const Conjunction = ({ index, rules, rule, setRules }) => {
             index={index}
             parentRule={rule}
             parentRuleIndex={ruleIndex + 1}
-            rules={rules}
             rule={_rule}
             ruleIndex={ruleIndex}
+            rules={rules}
             setRules={setRules}
           />
         )

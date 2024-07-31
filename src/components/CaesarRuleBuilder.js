@@ -19,8 +19,8 @@ export const CaesarRuleBuilder = () => {
               index={index}
               parentRule={rules}
               parentRuleIndex={index}
-              rules={rules}
               rule={rule}
+              rules={rules}
               setRules={setRules}
             />
           )

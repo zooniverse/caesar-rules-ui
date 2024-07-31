@@ -1,7 +1,7 @@
 import { Const } from './Const.js'
 import { Lookup } from './Lookup.js'
 
-export const Comparator = ({ connective, rules, rule, setRules }) => {
+export const Comparator = ({ connective, rule, rules, setRules }) => {
   const [_connective, ...values] = rule
 
   const addValue = e => {
@@ -22,8 +22,8 @@ export const Comparator = ({ connective, rules, rule, setRules }) => {
         return (
           <Component
             key={index}
-            rules={rules}
             rule={rule}
+            rules={rules}
             setRules={setRules}
             value={value}
             valueIndex={index}
