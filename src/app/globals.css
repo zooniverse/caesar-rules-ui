@@ -27,55 +27,58 @@ body {
 }
 
 body > * {
-	margin: 10px;
+  margin: 10px;
 }
 
-h2, h3, p {
-	margin: 0;
-	padding: 10px 0 10px 0;
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 10px 0 10px 0;
 }
 
-input, select {
-	padding: 5px 10px;
+input,
+select {
+  padding: 5px 10px;
 }
 
 /* Classes */
 
 .button {
-	background-color: var(--primary);
-	display: inline-block;
-	padding: .25em .5em;
-	border-radius: 2px;
+  background-color: var(--primary);
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 2px;
 }
 
 .button:hover {
-	background-color: var(--primary-dark);
-	cursor: pointer;
+  background-color: var(--primary-dark);
+  cursor: pointer;
 }
 
 .border {
-	padding: 10px;
-	border: 1px solid #999;
+  padding: 10px;
+  border: 1px solid #999;
 }
 
-.const, .lookup {
-	padding: 5px 0px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+.const,
+.lookup {
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-	& input {
-		margin: 0 0 0 10px;
-	}
+  & input {
+    margin: 0 0 0 10px;
+  }
 
-	& .button {
-		margin: 0 0 0 10px;
-	}
+  & .button {
+    margin: 0 0 0 10px;
+  }
 }
 
 .flex {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
