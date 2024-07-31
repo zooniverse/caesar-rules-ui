@@ -16,6 +16,7 @@ npm run dev
 ["gt", ["lookup", "test_data_stuf", 0], ["const", 3]]
 
 ## References Documentation
+- https://zooniverse.github.io/caesar/#conditions
+- https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#caesar-features-by-workflow
 - https://github.com/hughdickinson/panoptes-python-client/blob/python-caesar-rule/panoptes_client/python_rule_generator.py
 - https://github.com/zooniverse/panoptes-python-client/pull/275
-
